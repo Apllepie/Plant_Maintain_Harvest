@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b6qh16jt5sjwv"]
+
+[ext_resource type="Script" uid="uid://6nkfmjoba03m" path="res://src/grid/field.gd" id="1_5d5yp"]
+[ext_resource type="Script" uid="uid://tc0cqy8yn84y" path="res://src/grid/farm.gd" id="1_xum80"]
+
+[node name="Farm" type="Node2D" unique_id=1162494054]
+script = ExtResource("1_xum80")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=710041619]
+offset_right = 1955.0
+offset_bottom = 1096.0
+color = Color(0.5019608, 1, 1, 1)
+
+[node name="field_aspect" type="AspectRatioContainer" parent="ColorRect" unique_id=1955049482]
+light_mask = 17
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="field" type="ColorRect" parent="ColorRect/field_aspect" unique_id=1632809627]
+layout_mode = 2
+color = Color(0.4036472, 0.17072919, 0.12172545, 1)
+script = ExtResource("1_5d5yp")
